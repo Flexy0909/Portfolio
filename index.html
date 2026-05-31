@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Salum Abdallah - Computer Science Student Portfolio">
+    <title>Salum Abdallah | Software Engineer</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cursor blink animation fix for terminal -->
+    <style>
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                <div class="logo-box">SA</div>
+                <div class="logo-text text-white">
+                    <h1 class="mb-0 fs-6 fw-bold letter-spacing-2 font-code">SALUM ABDALLAH</h1>
+                    <p class="mb-0 text-primary-custom small font-code" style="font-size: 0.7rem;">CS STUDENT @ ATC</p>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-4"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-lg-4 mt-3 mt-lg-0 nav-list">
+                    <li class="nav-item"><a class="nav-link active text-white" href="#home">&gt; home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#about">&gt; about</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#skills">&gt; skills</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#portfolio">&gt; projects</a></li>
+                    <li class="nav-item me-lg-3"><a class="nav-link text-white" href="#contact">&gt; contact</a></li>
+                    <li class="nav-item mt-2 mt-lg-0">
+                        <a href="https://github.com/flexy0909" target="_blank" class="btn btn-outline-primary-custom w-100 font-code">
+                            <i class="fa-brands fa-github me-2"></i>GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center min-vh-100 pt-5 pt-lg-0">
+        <!-- Background Orbs -->
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+        
+        <div class="container">
+            <div class="row align-items-center gy-5 flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0">
+                    <span class="text-gradient fw-bold letter-spacing-2 font-code d-block mb-3 small">~$ hello_world.sh</span>
+                    <h1 class="display-4 fw-bold mb-4">I'm Salum Abdallah.<br>I engineer <span class="text-gradient">software</span>.</h1>
+                    <p class="text-muted-dark fs-5 mb-5 mx-auto mx-lg-0" style="max-width: 500px;">
+                        Computer Science Student at Arusha Technical College. Passionate about backend development, database design, and solving complex problems with code.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5">
+                        <a href="#portfolio" class="btn btn-primary-custom btn-lg font-code">View Projects_</a>
+                        <a href="#contact" class="btn btn-outline-primary-custom btn-lg font-code">Contact Me</a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4 hero-socials">
+                        <a href="https://github.com/flexy0909" target="_blank" class="text-white fs-4"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/salum-abdallah" target="_blank" class="text-white fs-4"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://instagram.com/officialflexy_09" target="_blank" class="text-white fs-4"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/officialflexy_09" target="_blank" class="text-white fs-4"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://facebook.com/officialflexy_09" target="_blank" class="text-white fs-4"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mx-auto w-100 text-center" style="max-width: 450px;">
+                        <!-- User Profile Image -->
+                        <img src="img/hero-profile.jpg" alt="Salum Abdallah" class="img-fluid rounded-4 shadow-lg animate-float" style="aspect-ratio: 4/5; object-fit: cover; padding-top: 10px; border: 1px solid var(--border-glass);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><hr class="border-secondary opacity-25"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 py-lg-6" style="margin-top: 80px;">
+        <div class="container py-5">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-5">
+                    <div class="mb-4 mb-lg-0 text-center">
+                        <img src="img/about-photo.jpg" alt="Salum working on laptop" class="img-fluid rounded-4 shadow-lg" style="aspect-ratio: 4/3; object-fit: cover; object-position: center 15%; max-width: 100%;">
+                    </div>
+                </div>
+                <div class="col-lg-7 ps-lg-5">
+                    <h2 class="section-title display-5 text-white">About Me</h2>
+                    <h3 class="h4 fw-bold mb-4">Translating logic into <span class="text-gradient">robust applications.</span></h3>
+                    <p class="text-muted-dark fs-5 mb-4">
+                        As a Computer Science student at Arusha Technical College, I focus on building efficient, scalable software solutions. My academic journey has grounded me in core computer science principles, algorithms, and system architectures.
+                    </p>
+                    <p class="text-muted-dark fs-5 mb-0">
+                        Whether it's scripting in Python, managing databases with SQL, or writing low-level code in C, I love the challenge of turning complex requirements into clean code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><hr class="border-secondary opacity-25"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 py-lg-6" style="margin-top: 80px;">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-md-5">
+                        <div class="text-center mb-4">
+                            <h2 class="section-title display-5 text-white">Skills</h2>
+                        </div>
+                        <h3 class="fw-bold mb-4 h4">Languages & Tools</h3>
+                        
+                        <div class="mb-5">
+                            <h4 class="h5 text-white font-code mb-3">&gt; Core Languages</h4>
+                            <div class="d-flex flex-wrap">
+                                <span class="skill-badge"><i class="fa-brands fa-python me-2"></i>Python</span>
+                                <span class="skill-badge"><i class="fa-solid fa-database me-2"></i>SQL</span>
+                                <span class="skill-badge"><i class="fa-solid fa-c me-2"></i>C Programming</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="h5 text-white font-code mb-3">&gt; Tools & Environments</h4>
+                            <div class="d-flex flex-wrap">
+                                <span class="skill-badge"><i class="fa-brands fa-git-alt me-2"></i>Git & GitHub</span>
+                                <span class="skill-badge"><i class="fa-solid fa-terminal me-2"></i>Linux / CLI</span>
+                                <span class="skill-badge"><i class="fa-solid fa-server me-2"></i>Database Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><hr class="border-secondary opacity-25"></div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 py-lg-6" style="margin-top: 80px;">
+        <div class="container py-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 gap-3">
+                <div>
+                    <h2 class="section-title display-5 text-white">Projects</h2>
+                    <h3 class="h4 fw-bold mb-0">Things I've Built</h3>
+                </div>
+                <a href="https://github.com/flexy0909" target="_blank" class="btn btn-outline-primary-custom font-code d-inline-flex align-items-center gap-2">View GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+            
+            <div class="row justify-content-center">
+                <!-- Project 1: Web ERP -->
+                <div class="col-lg-10">
+                    <div class="glass-card portfolio-card p-4 p-md-5 mb-5">
+                        <div class="row align-items-center gy-4">
+                            <div class="col-md-7">
+                                <h3 class="fw-bold mb-3">Urban Washers Web ERP</h3>
+                                <div class="mb-3">
+                                    <span class="tech-stack-tag">Python</span>
+                                    <span class="tech-stack-tag">SQL</span>
+                                    <span class="tech-stack-tag">Flask/Web Framework</span>
+                                </div>
+                                <p class="text-muted-dark mb-4">
+                                    A comprehensive Enterprise Resource Planning (ERP) system tailored for Urban Washers. It integrates billing, customer dashboards, inventory management, SMS notifications, and analytics into a single platform to streamline daily business operations.
+                                </p>
+                                <div class="d-flex gap-3">
+                                    <a href="https://github.com/flexy0909" target="_blank" class="btn btn-primary-custom font-code btn-sm d-flex align-items-center gap-2"><i class="fa-brands fa-github"></i> Source Code</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 text-center">
+                                <div class="terminal-window" style="font-size: 0.75rem; text-align: left; opacity: 0.8;">
+                                    <div class="terminal-header p-2">
+                                        <div class="terminal-dot dot-red" style="width:8px;height:8px;"></div>
+                                        <div class="terminal-dot dot-yellow" style="width:8px;height:8px;"></div>
+                                        <div class="terminal-dot dot-green" style="width:8px;height:8px;"></div>
+                                    </div>
+                                    <div class="p-3 font-code text-muted">
+                                        <p>> Starting ERP Server...</p>
+                                        <p class="text-success">> [OK] Database connected.</p>
+                                        <p>> Loading modules: billing, inventory, notifications...</p>
+                                        <p class="text-success">> [OK] Modules loaded.</p>
+                                        <p>> Running on http://127.0.0.1:5000/</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div class="container"><hr class="border-secondary opacity-25"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="pt-5 mt-5">
+        <div class="container py-5" style="margin-top: 80px;">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title display-5 text-white">Contact</h2>
+                    <h3 class="h4 fw-bold mb-4">Get In Touch</h3>
+                    <p class="text-muted-dark mb-5">
+                        I'm currently looking for new opportunities, internships, and exciting projects. Whether you have a question or just want to say hi, my inbox is always open!
+                    </p>
+                    <a href="mailto:salum@example.com" class="btn btn-primary-custom btn-lg font-code">Say Hello</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-custom pb-4 pt-4 mt-5 border-top border-secondary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-2">
+                        <div class="logo-box" style="width: 30px; height: 30px; font-size: 0.8rem;">SA</div>
+                        <span class="font-code text-white fw-bold">SALUM ABDALLAH</span>
+                    </div>
+                    <p class="text-muted-dark small mb-0 font-code">Built with code and coffee.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center justify-content-md-end gap-4 footer-socials">
+                    <a href="https://github.com/flexy0909" target="_blank" class="text-white fs-5"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/salum-abdallah" target="_blank" class="text-white fs-5"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/officialflexy_09" target="_blank" class="text-white fs-5"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/officialflexy_09" target="_blank" class="text-white fs-5"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://facebook.com/officialflexy_09" target="_blank" class="text-white fs-5"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS (Smooth scroll, Active link update) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* =========================================
+   CSS Variables & Base
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-custom: #00f2fe;
+    --secondary-custom: #b026ff;
+    --primary-hover: #4facfe;
+    --gradient-primary: linear-gradient(135deg, var(--primary-custom), var(--secondary-custom));
+    --bg-dark: #0a0f1c;
+    --bg-dark-secondary: #111827;
+    --bg-glass: rgba(20, 25, 40, 0.4);
+    --border-glass: rgba(255, 255, 255, 0.1);
+    --border-glow: rgba(0, 242, 254, 0.3);
+    --text-muted-dark: #9ca3af;
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'Fira Code', monospace;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: #f3f4f6;
+}
+
+/* Custom Color Utilities */
+.text-primary-custom { color: var(--primary-custom) !important; }
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.bg-primary-custom { background-color: var(--primary-custom) !important; }
+.bg-dark { background-color: var(--bg-dark) !important; }
+.bg-dark-secondary { background-color: var(--bg-dark-secondary) !important; }
+.text-muted-dark { color: var(--text-muted-dark) !important; }
+.border-secondary { border-color: var(--border-glass) !important; }
+
+/* Typography Utilities */
+.font-code { font-family: var(--font-code); }
+.letter-spacing-1 { letter-spacing: 1px; }
+.letter-spacing-2 { letter-spacing: 2px; }
+.py-lg-6 { padding-top: 100px !important; padding-bottom: 100px !important; }
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 5px;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+}
+.text-center .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* =========================================
+   Glassmorphism Utilities
+========================================= */
+.glass-card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+}
+.glass-card:hover {
+    border-color: var(--border-glow);
+    box-shadow: 0 10px 40px 0 rgba(0, 242, 254, 0.15);
+}
+
+/* =========================================
+   Buttons Customization
+========================================= */
+.btn-primary-custom {
+    background: var(--gradient-primary);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(176, 38, 255, 0.4);
+    color: #fff;
+}
+
+.btn-outline-primary-custom {
+    background-color: transparent;
+    color: var(--primary-custom);
+    border: 1px solid var(--primary-custom);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: var(--primary-custom);
+    color: #000;
+}
+
+/* =========================================
+   Header & Navigation
+========================================= */
+.custom-navbar {
+    background-color: rgba(10, 15, 28, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-glass);
+    padding: 15px 0;
+}
+
+.logo-box {
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid var(--primary-custom);
+    color: var(--primary-custom);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-family: var(--font-code);
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: var(--font-code);
+    transition: color var(--transition-fast) !important;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-custom) !important;
+}
+
+/* =========================================
+   Hero Section
+========================================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+/* Glowing Background Orbs */
+.bg-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.4;
+    animation: floatOrb 10s infinite ease-in-out alternate;
+}
+.orb-1 {
+    width: 400px;
+    height: 400px;
+    background: var(--primary-custom);
+    top: -100px;
+    right: -100px;
+}
+.orb-2 {
+    width: 300px;
+    height: 300px;
+    background: var(--secondary-custom);
+    bottom: -50px;
+    left: -100px;
+    animation-delay: -5s;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes floatOrb {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-30px, 30px) scale(1.1); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.hero-socials a {
+    transition: all var(--transition-fast);
+}
+.hero-socials a:hover {
+    color: var(--primary-custom) !important;
+    transform: translateY(-3px);
+}
+
+/* Terminal Window Mockup */
+.terminal-window {
+    background: #1e1e1e;
+    border-radius: 8px;
+    border: 1px solid var(--border-glass);
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.terminal-header {
+    background: #2d2d2d;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+}
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+.terminal-body {
+    padding: 20px;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    color: #d4d4d4;
+    text-align: left;
+}
+
+/* =========================================
+   Skills Section
+========================================= */
+.skill-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    margin: 5px;
+    transition: all var(--transition-fast);
+}
+.skill-badge:hover {
+    border-color: var(--primary-custom);
+    color: var(--primary-custom);
+    background: rgba(0, 242, 254, 0.05);
+}
+
+/* =========================================
+   Portfolio Section
+========================================= */
+.portfolio-card {
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    border-color: rgba(0, 242, 254, 0.3);
+}
+
+.tech-stack-tag {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.project-link {
+    width: 40px;
+    height: 40px;
+    transition: all var(--transition-fast);
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+}
+.project-link:hover {
+    background-color: var(--primary-custom) !important;
+    color: #000 !important;
+}
+
+/* =========================================
+   Footer Section
+========================================= */
+.footer-custom {
+    background-color: #050810 !important;
+}
+.footer-socials a, .footer-links a, .footer-bottom-links a {
+    transition: color var(--transition-fast);
+}
+.footer-socials a:hover, .footer-links a:hover, .footer-bottom-links a:hover {
+    color: var(--primary-custom) !important;
+}
+
+/* =========================================
+   Mobile Responsiveness
+========================================= */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .display-6 {
+        font-size: 1.8rem;
+    }
+    .py-lg-6 {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+    .hero {
+        padding-top: 100px !important; 
+        text-align: center;
+    }
+    .glass-card {
+        padding: 1.5rem !important;
+    }
+    .terminal-body {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+}
